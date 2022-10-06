@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+
+<% if user_signed_in? %>
+  <%= render "shared/mypage" %>
+<% else %>
+  <%= render "shared/toppage" %>
+<% end %>
+
+<%= render "shared/footer" %>
