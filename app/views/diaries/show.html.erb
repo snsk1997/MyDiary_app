@@ -1,5 +1,7 @@
 <%= render "shared/header" %><br>
 
+<%= link_to "Edit", edit_diary_path %><br>
+
 <%= @diary.record_day %>
 のDiary<br>
 <%= @diary.weather.name %><br>
@@ -7,3 +9,5 @@
 <%= @diary.content %><br>
 
 <%= link_to "Back", root_path %>
+
+<%= render "shared/footer" %>
