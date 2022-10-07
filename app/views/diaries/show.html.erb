@@ -1,6 +1,7 @@
 <%= render "shared/header" %><br>
 
 <%= link_to "Edit", edit_diary_path %><br>
+<%= link_to "Delete", diary_path, method: :delete %><br>
 
 <%= @diary.record_day %>
 のDiary<br>
