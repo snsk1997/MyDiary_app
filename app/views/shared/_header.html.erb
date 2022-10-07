@@ -1,6 +1,12 @@
-<%= link_to 'Logo', "/" %>
+<%= link_to 'Logo', 
+  if user_signed_in? 
+    user_path(current_user.id)
+  else
+    root_path
+  end
+%>
 
 <% if user_signed_in? %>
-  <%#= link_to current_user.name, root_path, class: "user-nickname" %>
+  <%#= link_to current_user.name, user_path(current_user.id), class: "user-nickname" %>
   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
 <% end %>

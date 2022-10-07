@@ -1,6 +1,5 @@
 class DiariesController < ApplicationController
   def index
-    @diary = Diary.all
   end
 
   def new
@@ -10,7 +9,7 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.create(diary_params)
     if @diary.save
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       render :new
     end
@@ -27,7 +26,7 @@ class DiariesController < ApplicationController
   def update
     @diary = Diary.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       render :edit
     end
@@ -36,7 +35,7 @@ class DiariesController < ApplicationController
   def destroy
     @diary = Diary.find(params[:id])
     if @diary.destroy
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       render :edit
     end
@@ -45,6 +44,6 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:title, :content, :record_day, :weather_id, :image, images: []).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :content, :record_day, :weather_id, images: []).merge(user_id: current_user.id)
   end
 end

@@ -7,9 +7,11 @@
 のDiary<br>
 <%= @diary.weather.name %><br>
 <%= @diary.title %><br>
-<%= image_tag @diary.image.variant(resize: '500x500') if @diary.image.attached? %><br>
+<% @diary.images.each do |image| %>
+    <%= image_tag image.variant(resize: '500x500') if @diary.images.attached? %><br>
+  <% end %>
 <%= @diary.content %><br>
 
-<%= link_to "Back", root_path %>
+<%= link_to "Back", user_path(current_user.id) %>
 
 <%= render "shared/footer" %>

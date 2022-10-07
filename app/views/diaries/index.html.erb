@@ -1,9 +1,6 @@
 <%= render "shared/header" %>
 
-<% if user_signed_in? && current_user.id %>
-  <%= render "shared/mypage" %>
-<% else %>
-  <%= render "shared/toppage" %>
-<% end %>
+<%= link_to 'ログイン', new_user_session_path, class: "login" %>
+<%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
 
 <%= render "shared/footer" %>
