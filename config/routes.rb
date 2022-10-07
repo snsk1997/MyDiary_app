@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root to: "diaries#index"
 
-  resources :diaries, only: [:index, :new, :create]
+  resources :diaries, only: [:index, :new, :create, :show]
 end
