@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user.id %>
   <%= render "shared/mypage" %>
 <% else %>
   <%= render "shared/toppage" %>

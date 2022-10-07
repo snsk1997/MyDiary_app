@@ -4,6 +4,9 @@
   <%= link_to diary_path(diary.id) do %>
     <%= diary.title %><br>
   <% end %>
+  <% diary.images.each do |image| %>
+    <%= image_tag image.variant(resize: '500x500') if diary.images.attached? %><br>
+  <% end %>
   <%= diary.content %><br>
   <%= diary.record_day %><br>
   <%= diary.weather.name %><br>
