@@ -7,6 +7,7 @@
 のDiary<br>
 <%= @diary.weather.name %><br>
 <%= @diary.title %><br>
+<%= image_tag @diary.image.variant(resize: '500x500') if @diary.image.attached? %><br>
 <%= @diary.content %><br>
 
 <%= link_to "Back", root_path %>

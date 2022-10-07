@@ -45,6 +45,6 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:title, :content, :record_day, :weather_id).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :content, :record_day, :weather_id, :image, images: []).merge(user_id: current_user.id)
   end
 end
