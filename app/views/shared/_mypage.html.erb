@@ -1,7 +1,9 @@
 ようこそ、MyDiaryへ!!<br>
 
 <% @diary.each do |diary| %>
-  <%= diary.title %><br>
+  <%= link_to diary_path(diary.id) do %>
+    <%= diary.title %><br>
+  <% end %>
   <%= diary.content %><br>
   <%= diary.record_day %><br>
   <%= diary.weather.name %><br>
