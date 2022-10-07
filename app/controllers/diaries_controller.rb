@@ -20,6 +20,19 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
   end
 
+  def edit
+    @diary = Diary.find(params[:id])
+  end
+
+  def update
+    @diary = Diary.find(params[:id])
+    if @diary.update(diary_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def diary_params

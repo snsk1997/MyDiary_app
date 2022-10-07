@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+
+Diary Edit<br>
+<%= form_with model: @diary, local: true do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
+
+  タイトル<br>
+  <%= f.text_area :title, class: "diary-title" %><br>
+  内容<br>
+  <%= f.text_area :content, class: "diary-content" %><br>
+  日付<br>
+  <%= f.date_field :record_day, class: "diary-day"%><br>
+  天気<br>
+  <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "diary-weather"}) %><br>
+  <%= f.submit "To Log", class: "log-btn" %>
+<% end %>
+
+<%= render "shared/footer" %>
