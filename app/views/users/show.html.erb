@@ -1,19 +1,50 @@
 <%= render "shared/header" %>
 
-ようこそ、MyDiaryへ!!<br>
+<div class="diary-main">
 
-<% @diary.each do |diary| %>
-  <%= link_to diary_path(diary.id) do %>
-    <%= diary.title %><br>
-  <% end %>
-  <% diary.images.each do |image| %>
-    <%= image_tag image.variant(resize: '500x500') if diary.images.attached? %><br>
-  <% end %>
-  <%= diary.content %><br>
-  <%= diary.record_day %><br>
-  <%= diary.weather.name %><br>
-<% end %>
+  <%# 日記帳 %>
 
-<%= link_to '日記を書く',new_diary_path, class: 'purchase-btn'%>
+  <div id="diary">
+    <div class="diary-cover">
+      <div class="diary-title">
+        MyDiary
+      </div>
+    </div>
+    <% @diary.each do |diary| %>
+    <div class="diary-page">
+      <%= link_to diary_path(diary.id) do %>
+        <%= diary.title %><br>
+      <% end %>
+      <% diary.images.each do |image| %>
+          <%= image_tag image.variant(resize: '300x300') if diary.images.attached? %><br>
+      <% end %>
+      <%= diary.content %><br>
+      <%= diary.record_day %><br>
+      <%= diary.weather.name %><br>
+    </div>
+    <% end %>
+    <% if @diary_count.even? %>
+      <div class="diary-back-cover">MyDiary</div>
+    <% else %>
+      <div class="blank"></div>
+      <div class="diary-back-cover">MyDiary</div>
+    <% end %>
+  </div>
+
+  <%# 日記帳 %>
+  <ul class="page-btn">
+    <li class="prev-page-btn">
+      <span id="prev-page">前のページ</span>
+    </li>
+    <li class="next-page-btn">
+      <span id="next-page">次のページ</span>
+    </li>
+  </ul>
+
+  <div class="new-diary-btn">
+    <%= link_to '日記を書く',new_diary_path, class: 'purchase-btn'%>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
+

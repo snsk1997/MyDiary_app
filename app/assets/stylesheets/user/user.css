@@ -1,0 +1,82 @@
+.diary-main{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('toppage.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+/* 本の中身 */
+#diary{
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+.diary-cover{
+  height: 1000px;
+  width: 700px;
+  background-image: url('bookcover.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.diary-title{
+  font-family: 'Great Vibes', cursive;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 70px;
+  margin: auto;
+}
+.diary-page{
+  height: 1000px;
+  width: 700px;
+  background-color: white;
+}
+.blank{
+  height: 1000px;
+  width: 700px;
+  background-color: white;
+}
+.diary-back-cover{
+  height: 1000px;
+  width: 700px;
+  background-image: url('bookbackcover.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.new-diary-btn{
+  margin: auto 0;
+  background-color: aquamarine;
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+}
+.page-btn {
+  text-align: center;
+  list-style: none;
+  width: 70%;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: -70px;
+}
+.prev-page-btn{
+  width: 50%;
+  float: left;
+}
+.next-page-btn{
+  width: 50%;
+  float: left;
+}
+.page-btn::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#prev-page, #next-page{
+  cursor: pointer;
+}

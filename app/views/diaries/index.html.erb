@@ -1,6 +1,20 @@
 <%= render "shared/header" %>
 
-<%= link_to 'ログイン', new_user_session_path, class: "login" %>
-<%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
-
+<div class="main">
+  <div class="main-texts">
+    <div class="main-text">
+      <div class="main-title">
+        MyDiary
+      </div>
+      <div class="main-sub-title">
+        あなたのためだけのダイアリー
+      </div>
+    </div>
+    <div class="sign-in-up-btn">
+      <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+      <%= link_to '登録する', new_user_registration_path, class: "sign-up" %>
+    </div>
+  </div>
+</div>
 <%= render "shared/footer" %>
+
