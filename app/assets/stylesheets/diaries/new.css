@@ -1,0 +1,114 @@
+.new-diary-main,.edit-diary-main{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('toppage.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.new-diary-mains,.edit-diary-mains{
+  margin: auto 0;
+}
+.new-diary-texts,.edit-diary-texts{
+  height: 700px;
+  width: 500px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.new-diary-text,.edit-diary-text{
+  padding: 25px;
+}
+/* 日付・天気 */
+.new-diary-header,.edit-diary-header{
+  display: flex;
+  justify-content: space-between;
+}
+/* 日付 */
+.new-diary-days,.edit-diary-days{
+  display: flex;
+}
+.new-diary-day-label,.edit-diary-day-label{
+  margin-right: 5px;
+}
+.new-diary-day,.edit-diary-day{
+  height: 25px;
+}
+/* 天気 */
+.new-diary-weathers,.edit-diary-weathers{
+  display: flex;
+}
+.new-diary-weather-label,.edit-diary-weather-label{
+  margin-right: 5px;
+}
+.new-diary-weather,.edit-diary-weather{
+  height: 25px;
+}
+/* 画像 */
+.new-diary-image-text,.edit-diary-image-text{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-diary-imeges,.edit-diary-imeges{
+  text-align: center;
+}
+.new-diary-image,.edit-diary-imege{
+  text-align: center;
+  width: 265px;
+  margin-top: 10px;
+}
+/* タイトル */
+.new-diary-title-text,.edit-diary-title-text{
+  height: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-diray-title-label,.edit-diray-title-label{
+  text-align: center;
+}
+.new-diary-title,.edit-diary-title{
+  margin-top: 10px;
+  height: 30px;
+  padding: 0 5px;
+}
+/* 内容 */
+.new-diary-content-text,.edit-diary-content-text{
+  height: 280px;
+  display: flex;
+  justify-content: center;
+}
+.new-diary-contents,.edit-diary-contents{
+  width: 100%;
+  height: 90%;
+}
+.new-diray-content-label,.edit-diray-content-label{
+  text-align: center;
+}
+.new-diary-content,.edit-diary-content{
+  margin-top: 10px;
+  height: 250px;
+  width: 95%;
+  padding: 10px;
+}
+/* new diary btn */
+.new-diary-footer,.edit-diary-footer{
+  display: flex;
+  justify-content: space-between;
+}
+.new-diary-back-btn,.edit-diary-back-btn{
+  margin-top: 60px;
+}
+.log-btn{
+  margin-top: 60px;
+}
+/* エラーメッセージ */
+.new-diary-error-message,.edit-diary-error-message{
+  position: absolute;
+  right: -300px;
+  background-color: rgba(255, 255, 255, 0.5);
+}

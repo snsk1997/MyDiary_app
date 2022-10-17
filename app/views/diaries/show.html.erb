@@ -1,17 +1,34 @@
-<%= render "shared/header" %><br>
+<%= render "shared/header" %>
 
-<%= link_to "Edit", edit_diary_path %><br>
-<%= link_to "Delete", diary_path, method: :delete %><br>
-
-<%= @diary.record_day %>
-のDiary<br>
-<%= @diary.weather.name %><br>
-<%= @diary.title %><br>
-<% @diary.images.each do |image| %>
-    <%= image_tag image.variant(resize: '500x500') if @diary.images.attached? %><br>
-  <% end %>
-<%= @diary.content %><br>
-
-<%= link_to "Back", user_path(current_user.id) %>
+<div class="show-diary-main">
+  <div class="show-diary-texts">
+    <div class="show-diary-text">
+      <div class="show-diary-header">
+        <div class="show-diary-day">
+          <%= @diary.record_day %>
+        </div>
+        <div class="show-diary-weather">
+          <%= @diary.weather.name %>
+        </div>
+      </div>
+      <div class="show-diary-images">
+        <% @diary.images.each do |image| %>
+          <%= image_tag image, class: "show-diary-image" if @diary.images.attached? %><br>
+        <% end %>
+      </div>
+      <div class="show-diary-title">
+        <%= @diary.title %>
+      </div>
+      <div class="show-diary-content">
+        <%= @diary.content %>
+      </div>
+      <%= link_to "Back", user_path(current_user.id), class: "show-back-btn" %>
+    </div>
+  </div>
+  <div class="show-diary-action-btn">
+    <%= link_to "日記を編集する", edit_diary_path, class: "edit-btn" %>
+    <%= link_to "日記を削除する", diary_path, method: :delete, class: "delete-btn" %>
+  </div>
+</div>
 
 <%= render "shared/footer" %>

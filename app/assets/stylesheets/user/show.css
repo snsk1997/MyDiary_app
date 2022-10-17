@@ -1,0 +1,158 @@
+.diary-main{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('toppage.jpg');
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.container{
+  height: 0px;
+  position:absolute;
+	top:50%;
+	left:50%;
+}
+/* 日記の検索 */
+.seach{
+  margin-top: 18px;
+}
+.seach-input{
+  border: none;
+  padding: 5px;
+}
+.seach-btn{
+  border: none;
+  padding: 5px;
+}
+/* 本の中身 */
+.diary{
+  position: relative;
+  left:-495px;
+	top:-285px;
+}
+.diary-cover{
+  background-image: url('bookcover.jpg');
+  background-size: cover;
+  display: flex;
+  box-shadow: 5px 0 20px 0 rgba(0, 0, 0, 1) inset;
+  border-radius: 5px;
+}
+.diary-title{
+  font-family: 'Great Vibes', cursive;
+  justify-content: center;
+  margin: auto;
+  margin-right: 100px;
+  font-size: 70px;
+  color: aliceblue;
+}
+.diary-page{
+  background-color: rgb(255, 245, 225);
+  position: relative;
+}
+.diary-page-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.diary-page-images{
+  height: 40%;
+  width: 100%;
+  text-align: center;
+}
+.diary-page-image{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+.image-blank{
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  font-size: 50px;
+}
+.diary-page-texts{
+  height: 50%;
+  width: 100%;
+}
+.diary-page-title{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+.diary-page-content{
+  padding: 25px;
+}
+.blank{
+  background-color: white;
+}
+.diary-back-cover{
+  background-image: url('bookbackcover.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 1) inset;
+  border-radius: 5px;
+}
+.diary-back-cover-text{
+  margin-bottom: 30px;
+  color: aliceblue;
+}
+.pen-btn-text{
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  bottom: 10px;
+  right: 90px;
+}
+.pen-btn{
+  position: absolute;
+  right: 50px;
+  bottom: -25px;
+  height: 150px;
+  width: 150px;
+}
+.page-btn {
+  text-align: center;
+  list-style: none;
+  width: 70%;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: -70px;
+}
+.prev-page-btn{
+  width: 50%;
+  float: left;
+}
+.next-page-btn{
+  width: 50%;
+  float: left;
+}
+.page-btn::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#prev-page, #next-page{
+  cursor: pointer;
+}
+
+.diary-page-header-record-day,
+.diary-page-header-weather,
+.diary-page-title,
+.diary-page-content
+{
+  font-family: Hannotate SC;
+  font-size: 18px;
+}
+.diary-page-header-record-day,
+.diary-page-header-weather{
+  border-bottom: 2px solid;
+}
+.diary-page-title{
+  font-size: 24px;
+}

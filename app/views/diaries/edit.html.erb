@@ -1,21 +1,51 @@
 <%= render "shared/header" %>
 
-Diary Edit<br>
-<%= form_with model: @diary, local: true do |f| %>
-
-<%= render 'shared/error_messages', model: f.object %>
-
-  タイトル<br>
-  <%= f.text_area :title, class: "diary-title" %><br>
-  画像<br>
-  <%= f.file_field :image, class: "diary-image" %><br>
-  内容<br>
-  <%= f.text_area :content, class: "diary-content" %><br>
-  日付<br>
-  <%= f.date_field :record_day, class: "diary-day"%><br>
-  天気<br>
-  <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "diary-weather"}) %><br>
-  <%= f.submit "To Log", class: "log-btn" %>
-<% end %>
-
+<div class="edit-diary-main">
+  <div class="edit-diary-mains">
+    <div class="edit-diary-texts">
+    <%= form_with model: @diary, local: true do |f| %>
+      <div class="edit-diary-error-message">
+        <%= render 'shared/error_messages', model: f.object %>
+      </div>
+      <div class="edit-diary-text"> 
+        <div class="Diary-Edit">
+          Diary Edit<br>
+        </div>
+        <div class="edit-diary-header">
+          <div class="edit-diary-days">
+            <div class="edit-diary-day-label">日付</div>
+            <%= f.date_field :record_day, class: "edit-diary-day"%><br>
+          </div>
+          <div class="edit-diary-weathers">
+            <div class="edit-diary-weather-label">天気</div>
+            <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "edit-diary-weather"}) %><br>
+          </div>
+        </div>
+        <div class="edit-diary-image-text">
+          <div class="edit-diary-imege">
+            <div class="edit-diary-images-label">画像</div>
+            <%= f.file_field :images, multiple: true, class: "-diary-image" %>
+          </div>
+        </div>
+        <div class="edit-diary-title-text"> 
+          <div class="edit-diary-titles">
+            <div class="edit-diray-title-label">タイトル</div>
+            <%= f.text_field :title, class: "edit-diary-title" %>
+          </div>
+        </div>
+        <div class="edit-diary-content-text">
+          <div class="edit-diary-contents">
+            <div class="edit-diray-content-label">内容</div>
+            <%= f.text_area :content, class: "edit-diary-content" %>
+          </div>
+        </div>
+        <div class="edit-diary-footer">
+          <%= link_to "もどる", user_path(current_user.id) ,class: "edit-diary-back-btn"%>
+          <%= f.submit "To Log", class: "log-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 <%= render "shared/footer" %>

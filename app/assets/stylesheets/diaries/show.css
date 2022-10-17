@@ -1,0 +1,79 @@
+.show-diary-main{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('toppage.jpg');
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+}
+.show-diary-texts{
+  margin: auto;
+  height: 700px;
+  width: 500px;
+  background-color: rgb(255, 245, 225);
+}
+.show-diary-text{
+  padding: 25px;
+}
+/* 日付・天気 */
+.show-diary-header{
+  display: flex;
+  justify-content: space-between;
+}
+.show-diary-day{
+  font-family: Hannotate SC;
+  border-bottom: 2px solid;
+}
+.show-diary-weather{
+  font-family: Hannotate SC;
+  border-bottom: 2px solid;
+}
+/* 画像 */
+.show-diary-images{
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+.show-diary-image{
+  height: 250px;
+  width: 250px;
+}
+/* タイトル */
+.show-diary-title{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Hannotate SC;
+  font-size: 24px;
+}
+/* 内容 */
+.show-diary-content{
+  margin: 20px;
+  height: 230px;
+  width: 100%;
+  font-family: Hannotate SC;
+}
+.show-back-btn{
+  text-decoration: none;
+  color: black;
+}
+/* 編集・削除ボタン */
+.show-diary-action-btn{
+  display: flex;
+  justify-content: center;
+  font-family: Hannotate SC;
+  padding-bottom: 45px;
+}
+.edit-btn{
+  margin-right: 40px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid;
+}
+.delete-btn{
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid;
+}
