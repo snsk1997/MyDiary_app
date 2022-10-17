@@ -52,10 +52,10 @@
   justify-content: center;
   align-items: center;
 }
-.new-diary-imeges,.edit-diary-imeges{
+.new-diary-images,.edit-diary-images{
   text-align: center;
 }
-.new-diary-image,.edit-diary-imege{
+.new-diary-image,.edit-diary-image{
   text-align: center;
   width: 265px;
   margin-top: 10px;
@@ -68,7 +68,7 @@
   justify-content: center;
   align-items: center;
 }
-.new-diray-title-label,.edit-diray-title-label{
+.new-diray-title-label,.edit-diary-title-label{
   text-align: center;
 }
 .new-diary-title,.edit-diary-title{
@@ -86,7 +86,7 @@
   width: 100%;
   height: 90%;
 }
-.new-diray-content-label,.edit-diray-content-label{
+.new-diray-content-label,.edit-diary-content-label{
   text-align: center;
 }
 .new-diary-content,.edit-diary-content{

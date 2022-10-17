@@ -11,6 +11,7 @@
   height: 700px;
   width: 500px;
   background-color: rgb(255, 245, 225);
+  position: relative;
 }
 .show-diary-text{
   padding: 25px;
@@ -23,17 +24,27 @@
 .show-diary-day{
   font-family: Hannotate SC;
   border-bottom: 2px solid;
+  font-size: 18px;
 }
 .show-diary-weather{
   font-family: Hannotate SC;
   border-bottom: 2px solid;
+  font-size: 18px;
 }
 /* 画像 */
 .show-diary-images{
-  height: 40%;
+  height: 250px;
   width: 100%;
   text-align: center;
   margin-top: 25px;
+}
+.show-image-blank{
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  position: absolute;
+  left: 30%;
+  top: 25%;
 }
 .show-diary-image{
   height: 250px;
@@ -53,6 +64,7 @@
   height: 230px;
   width: 100%;
   font-family: Hannotate SC;
+  font-size: 18px;
 }
 .show-back-btn{
   text-decoration: none;
