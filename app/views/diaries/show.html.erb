@@ -12,8 +12,12 @@
         </div>
       </div>
       <div class="show-diary-images">
-        <% @diary.images.each do |image| %>
-          <%= image_tag image, class: "show-diary-image" if @diary.images.attached? %><br>
+        <% if @diary.images.blank? %>
+          <div class="show-image-blank">MyDiary</div>
+        <% else %>
+          <% @diary.images.each do |image| %>
+            <%= image_tag image, class: "show-diary-image" if @diary.images.attached? %><br>
+          <% end %>
         <% end %>
       </div>
       <div class="show-diary-title">

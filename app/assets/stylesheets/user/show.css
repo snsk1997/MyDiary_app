@@ -14,14 +14,14 @@
 	left:50%;
 }
 /* 日記の検索 */
-.seach{
+.search{
   margin-top: 18px;
 }
-.seach-input{
+.search-input{
   border: none;
   padding: 5px;
 }
-.seach-btn{
+.search-btn{
   border: none;
   padding: 5px;
 }
