@@ -4,4 +4,8 @@ class UsersController < ApplicationController
     @diary = user.diaries
     @diary_count = user.diaries.count
   end
+
+  def search
+    @diary = Diary.search(params[:keyword])
+  end
 end

@@ -4,4 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :diaries
+
+  def self.search(search)
+    if search != ""
+      User.joins(:diary).where('title LIKE(?)', "%#{search}%")
+    else
+      User.all
+    end
+  end
 end

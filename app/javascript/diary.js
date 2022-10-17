@@ -1,23 +1,22 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   $('#diary').turn(
     {
-      //自動でページをめくった時の高さ
+      width: 1000,
+      height: 700,
       elevation: 50,
-
       duration: 1000,
-
       gradients: true,
-
-      autoCenter: false,
-
-      direction: 'ltr',
+      autoCenter: true,
+      direction: 'ltr',      
+      
     }
   );
 
   $('#prev-page').click(function(){
     $('#diary').turn('previous')
-  })
+  });
   $('#next-page').click(function(){
     $('#diary').turn('next')
-  })
+  });
+
 });

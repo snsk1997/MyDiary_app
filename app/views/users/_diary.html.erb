@@ -1,0 +1,53 @@
+<div class="container">
+    <div id="diary" class="diary">
+      <div id="diary-cover" class="diary-cover hard">
+        <div class="diary-title">
+          MyDiary
+        </div>
+      </div>
+      <div class="blank hard"></div>
+      <% @diary.each do |diary| %>
+      <div class="diary-page">
+        <div class="diary-page-header">
+          <div class="diary-page-header-record-day">
+            <%= diary.record_day %>
+          </div>
+          <div class="diary-page-header-weather">
+            <%= diary.weather.name %>
+          </div>
+        </div>
+        <div class="diary-page-images">
+        <% if diary.images.blank? %>
+          <div class="image-blank">MyDiary</div>
+        <% else %>
+          <% diary.images.each do |image| %>
+            <%= image_tag image, id: "diary-image", class: "diary-page-image" if diary.images.attached? %>
+          <% end %>
+        <% end %>
+        </div>
+        <div class="diary-page-texts">
+          <div class="diary-page-title">
+            <%= link_to diary_path(diary.id),class: "diary-page-title" do %>
+              <%= diary.title %>
+            <% end %>
+          </div>
+          <div class="diary-page-content">
+            <%= diary.content %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% if @diary_count.even? %>
+      <div class="blank hard"></div>
+      <div class="diary-back-cover hard">
+        <div class="diary-back-cover-text">MyDiary</div>
+      </div>
+      <% else %>
+      <div class="blank"></div>
+      <div class="blank hard"></div>
+      <div class="diary-back-cover hard">
+        <div class="diary-back-cover-text">MyDiary</div>
+      </div>
+      <% end %>
+    </div>
+  </div>

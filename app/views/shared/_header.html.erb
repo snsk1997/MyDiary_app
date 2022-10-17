@@ -1,7 +1,14 @@
 <div class="header">
   <div class="header-content">
     <div class="header-logo">
-      <div class='MyDiary'>MyDiary</div>
+      <%= link_to 'MyDiary', 
+        if user_signed_in? 
+          user_path(current_user.id)
+        else
+          root_path
+        end,
+        class: "logo"
+      %>
     </div>
     <ul class="nav">
       <li><%= link_to 'お知らせ', '#', class: "news" %></li>
