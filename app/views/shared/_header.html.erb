@@ -11,8 +11,7 @@
       %>
     </div>
     <ul class="nav">
-      <li><%= link_to 'お知らせ', '#', class: "news" %></li>
-      <li><%= link_to '使い方', '#', class: "how-to-use" %></li>
+      
       <% if user_signed_in? %>
         <%#= link_to current_user.name, user_path(current_user.id), class: "user-nickname" %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
