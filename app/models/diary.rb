@@ -8,7 +8,7 @@ class Diary < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :content, unless: :was_attached?
+    validates :content
     validates :record_day
   end
 
