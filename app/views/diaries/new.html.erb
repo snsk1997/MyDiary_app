@@ -24,7 +24,7 @@
         <div class="new-diary-image-text">
           <div class="new-diary-imeges">
             <div class="new-diary-images-label">画像</div>
-            <%= f.file_field :images, class: "new-diary-image" %>
+            <%= f.file_field :images, multiple: true, class: "new-diary-image" %>
           </div>
         </div>
         <div class="new-diary-title-text"> 

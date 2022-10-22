@@ -38,6 +38,9 @@
   text-align: center;
   margin-top: 25px;
 }
+.show-diary-image{
+  object-fit: cover;
+}
 .show-image-blank{
   text-align: center;
   font-family: 'Great Vibes', cursive;
